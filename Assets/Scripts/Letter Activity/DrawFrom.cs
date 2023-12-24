@@ -16,6 +16,8 @@ public class DrawFrom : MonoBehaviour
 
     [SerializeField]
     private float minDistance =0.1f;
+    [SerializeField]
+    private GameObject gameObject1;
 
     private bool isDragging;
 
@@ -30,12 +32,12 @@ public class DrawFrom : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             RaycastHit2D hit = Physics2D.Raycast((Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             Vector3 currentPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             currentPosition.z =0f;
-            if (hit.collider != null && hit.collider.gameObject == gameObject)
+            //if (hit.collider.gameObject == gameObject1)
             {
                 isDragging =true;
                 if(Vector3.Distance(currentPosition,previousPosition)> minDistance)
@@ -62,25 +64,6 @@ public class DrawFrom : MonoBehaviour
             endPoint = currentPosition;
 
         }
-        if (Input.GetMouseButtonUp(0))
-        {
-            isDragging = false;
-            RaycastHit2D hit = Physics2D.Raycast(endPoint, Vector2.zero);
-            
-             
-            //if(hit.collider != null && hit.collider.TryGetComponent(out objectMatchForm) && matchId == objectMatchForm.Get_ID())
-            if(hit.collider != null)
-            {
-                
-                this.enabled = false;
-            }
-            else
-            {
-                line.positionCount = 0;
-                
-            }
-            line.positionCount = 2;
-            
-        }
+        
     }
 }

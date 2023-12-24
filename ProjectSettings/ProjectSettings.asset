@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: University of Sri Jayewardenepura
   productName: "VIDUMAGA(\u0DC0\u0DD2\u0DAF\u0DD4\u0DB8\u0D9C)"
-  defaultCursor: {fileID: 2800000, guid: bf397daed4ee1dc41ae74e3aad0dec88, type: 3}
+  defaultCursor: {fileID: 0}
   cursorHotspot: {x: 20, y: 20}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
