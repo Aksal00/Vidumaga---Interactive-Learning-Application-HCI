@@ -13,12 +13,12 @@ public class DrawWithMouse : MonoBehaviour
     private Vector3 previousPosition;
     [SerializeField]
     private float Width = 1.0f;
-    [SerializeField]
+    /*[SerializeField]
     private GameObject object1;
     [SerializeField]
     private GameObject object2;
     [SerializeField]
-    private Image arrowimg;
+    private Image arrowimg;*/
     
 
     [SerializeField]
@@ -60,6 +60,7 @@ public class DrawWithMouse : MonoBehaviour
             
 
             }
+            
             
         }
         if(Input.GetMouseButtonDown(0)){
