@@ -56,5 +56,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Vidumaga---Interactive-Learning-Application-HCI.sln"
+    "dotnet.defaultSolution": "Vidumaga---Interactive-Learning-Application-HCI.sln",
+    "cSpell.words": [
+        "Rigidbody"
+    ]
 }

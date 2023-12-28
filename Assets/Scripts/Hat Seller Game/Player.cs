@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -8,6 +7,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private Rigidbody2D rb;
     private Animator anim;
+
+    private Transform pos;
     
     [SerializeField] private float moveSpeed;
     private float xInput;
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        pos = GetComponent<Transform>();
         anim = GetComponentInChildren<Animator>();
     }
 
@@ -34,11 +36,27 @@ public class Player : MonoBehaviour
     private void Check_Input()
     {
         xInput = Input.GetAxisRaw("Horizontal");
+        
+        
     }
 
     private void Movements()
     {
-        rb.velocity = new Vector2(xInput * moveSpeed, rb.velocity.y);
+        //rb.velocity = new Vector2(xInput * moveSpeed, rb.velocity.y);
+        Vector3 Mouse_Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Mouse_Position.z =0f;
+        if (pos.position.x < (Mouse_Position.x-0.2))
+        {
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+        }
+        else if (pos.position.x > (Mouse_Position.x+0.2))
+        {
+            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
     }
 
     private void AnimatorControllers()
