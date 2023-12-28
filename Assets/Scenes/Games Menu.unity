@@ -1385,7 +1385,7 @@ GameObject:
   - component: {fileID: 1884193810}
   - component: {fileID: 1884193809}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Game Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1454,7 +1454,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1884193810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 894624063}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: Hat_Seller_Game
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1884193810
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Letter A.unity
     guid: 01aaef78d5f1095418eefbf3f9a83ad4
+  - enabled: 1
+    path: Assets/Scenes/Hat Seller Game.unity
+    guid: b6ac40baff7c0624ca9d7f9fdd8babdf
   m_configObjects: {}

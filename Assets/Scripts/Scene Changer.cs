@@ -39,6 +39,11 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Scenes/Letter A");
     }
+    public void Hat_Seller_Game()
+    {
+        SceneManager.LoadScene("Scenes/Hat Seller Game");
+    }
+
 
 
 }
