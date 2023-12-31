@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    public GameObject PauseMenu;
+    public GameObject Starting_Menu;
+
     private Transform pos;
     
     [SerializeField] private float moveSpeed;
@@ -43,19 +46,27 @@ public class Player : MonoBehaviour
     private void Movements()
     {
         //rb.velocity = new Vector2(xInput * moveSpeed, rb.velocity.y);
-        Vector3 Mouse_Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Mouse_Position.z =0f;
-        if (pos.position.x < (Mouse_Position.x-0.2))
-        {
-            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-        }
-        else if (pos.position.x > (Mouse_Position.x+0.2))
-        {
-            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+        if (!PauseMenu.activeSelf && !Starting_Menu.activeSelf)
+        {   
+            anim.enabled = true;
+            Vector3 Mouse_Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Mouse_Position.z =0f;
+            if (pos.position.x < (Mouse_Position.x-0.2))
+            {
+                rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+            }
+            else if (pos.position.x > (Mouse_Position.x+0.2))
+            {
+                rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
         }
         else
         {
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            anim.enabled = false;
         }
     }
 
