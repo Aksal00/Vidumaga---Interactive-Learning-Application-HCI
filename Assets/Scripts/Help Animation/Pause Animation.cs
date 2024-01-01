@@ -25,20 +25,20 @@ public class PauseAnimation : MonoBehaviour
         //dialog_box
         dialog_box.localPosition = new Vector2(0,-Screen.height);
         dialog_box.LeanMoveLocalY(80,0.5f).setEaseOutExpo().delay = 0.1f;
-        dialog_box.LeanMoveLocalX(-220,0.5f).setEaseOutExpo().delay = 0.1f;
+        dialog_box.LeanMoveLocalX(0,0.5f).setEaseOutExpo().delay = 0.1f;
         //buttons  
         
         button1.localPosition = new Vector2(0,-Screen.height);
-        button1.LeanMoveLocalY(0,0.5f).setEaseOutExpo().delay = 0.1f;
-        button1.LeanMoveLocalX(-420,0.5f).setEaseOutExpo().delay = 0.1f;
+        button1.LeanMoveLocalY(-160,0.5f).setEaseOutExpo().delay = 0.1f;
+        button1.LeanMoveLocalX(-280,0.5f).setEaseOutExpo().delay = 0.1f;
 
         button2.localPosition = new Vector2(0,-Screen.height);
-        button2.LeanMoveLocalY(0,0.5f).setEaseOutExpo().delay = 0.1f;
-        button2.LeanMoveLocalX(-20,0.5f).setEaseOutExpo().delay = 0.1f;
+        button2.LeanMoveLocalY(-160,0.5f).setEaseOutExpo().delay = 0.1f;
+        button2.LeanMoveLocalX(0,0.5f).setEaseOutExpo().delay = 0.1f;
 
         button3.localPosition = new Vector2(0,-Screen.height);
-        button3.LeanMoveLocalY(20,0.5f).setEaseOutExpo().delay = 0.1f;
-        button3.LeanMoveLocalX(-220,0.5f).setEaseOutExpo().delay = 0.1f;
+        button3.LeanMoveLocalY(-160,0.5f).setEaseOutExpo().delay = 0.1f;
+        button3.LeanMoveLocalX(280,0.5f).setEaseOutExpo().delay = 0.1f;
 
 
         

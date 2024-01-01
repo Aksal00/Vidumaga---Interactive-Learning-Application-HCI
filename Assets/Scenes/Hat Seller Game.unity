@@ -1737,7 +1737,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -520.44, y: -78.51001}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 120, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &824181323
 MonoBehaviour:
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1768,9 +1768,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 8aa19ce701fce7a4bbbeee238ba30801, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 856bc4a52e2d5d243a485abf45ec1ced, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 856bc4a52e2d5d243a485abf45ec1ced, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: e75c1efa86faf454fa33dbe2a34c6206, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 32dbbc884e1be1649a38d5786fe7a494, type: 3}
+    m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1787,6 +1787,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PauseAnimation, Assembly-CSharp
         m_MethodName: ClosePauseMenu
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1625844423}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1815,7 +1827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3616f87a8b8064640b6ce9d51c64c789, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad13a862bbbe6a9428e4f98f2d187eea, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3071,7 +3083,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -90.535034, y: -78.51001}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 120, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589113059
 MonoBehaviour:
@@ -3104,7 +3116,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 5cf076190f5d22b4db8870be7a8915ce, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: f444c58637729e74e859e8bbc4617c72, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: f444c58637729e74e859e8bbc4617c72, type: 3}
+    m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -3121,6 +3133,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: Games_Menu_Button
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1625844423}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3187,7 +3211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1625844424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3304,8 +3328,8 @@ MonoBehaviour:
   instructor_button: {fileID: 651898178}
   dialog_box: {fileID: 1683593770}
   button1: {fileID: 824181322}
-  button2: {fileID: 1589113058}
-  button3: {fileID: 1766436853}
+  button2: {fileID: 1766436853}
+  button3: {fileID: 1589113058}
   background: {fileID: 1587694739}
 --- !u!1 &1680375272
 GameObject:
@@ -3409,7 +3433,7 @@ RectTransform:
   m_GameObject: {fileID: 1683593769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.574954, y: 0.76, z: 1}
+  m_LocalScale: {x: 0.55, y: 0.76, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1625844429}
@@ -3627,7 +3651,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -520.44, y: -78.51001}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 120, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766436854
 MonoBehaviour:
@@ -3658,9 +3682,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 8aa19ce701fce7a4bbbeee238ba30801, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 856bc4a52e2d5d243a485abf45ec1ced, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 856bc4a52e2d5d243a485abf45ec1ced, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 13662734d0e72694fa46ac4c91eb979f, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 0e86e393b5ca31a42b4f9e7d45140208, type: 3}
+    m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -3677,6 +3701,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PauseAnimation, Assembly-CSharp
         m_MethodName: ClosePauseMenu
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1625844423}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3705,7 +3741,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3616f87a8b8064640b6ce9d51c64c789, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6292c879cbd3e884f9c5105c608f7f76, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5023,7 +5059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2131795577
 MonoBehaviour:
   m_ObjectHideFlags: 0
