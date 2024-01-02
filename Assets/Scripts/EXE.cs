@@ -11,6 +11,9 @@ public class EXE : MonoBehaviour
     // Start is called before the first frame update
     Process newprocess = new Process();
     ProcessStartInfo psi = new ProcessStartInfo();
+
+    [SerializeField] private GameObject Hand;
+    [SerializeField] private GameObject HandManager;
     
     int state;
     public void execontroller(int state)
@@ -20,8 +23,11 @@ public class EXE : MonoBehaviour
         
         if (state == 1){
                 newprocess.Start();
+                Hand.gameObject.SetActive(true);
+                HandManager.gameObject.SetActive(true);
         }
         if (state == 0){
+                
                 string processName = "Hand_Tracking_Module"; // Replace with the actual process name or executable file name without the extension
 
                 Process[] processes = Process.GetProcessesByName(processName);
@@ -40,11 +46,14 @@ public class EXE : MonoBehaviour
                             Console.WriteLine($"Error terminating process: {ex.Message}");
                         }
                     }
+                    
                 }
                 else
                 {
                     Console.WriteLine($"No process found with the name {processName}.");
                 }
+                Hand.gameObject.SetActive(false);
+                HandManager.gameObject.SetActive(false);
         }
 
     }

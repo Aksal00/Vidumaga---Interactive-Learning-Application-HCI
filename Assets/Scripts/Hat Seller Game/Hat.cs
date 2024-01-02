@@ -9,13 +9,16 @@ public class Hat : MonoBehaviour
     private Rigidbody2D rb;
 
     public Motion motion;
-
+    
+    public CountdownController cc;
     private Transform pos;
 
     private bool red_hat = false;
     private float xSpeed;
 
     [SerializeField ]private TMP_Text pointsDisplay;
+
+    [SerializeField ]private TMP_Text totalPointsDisplay;
     [SerializeField ]private float ySpeed;
     [SerializeField ]private float xSpeedRange;
 
@@ -29,19 +32,20 @@ public class Hat : MonoBehaviour
     [SerializeField]private GameObject Chance3;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        pos = GetComponent<Transform>();
-        pos.position = new Vector2(0.0f, 3.6f);
-        red_hat = false;
-        rb.velocity = new Vector2(xSpeed, ySpeed);
-        xSpeed = UnityEngine.Random.Range(-xSpeedRange, xSpeedRange);
         
+            rb = GetComponent<Rigidbody2D>();
+            pos = GetComponent<Transform>();
+            pos.position = new Vector2(0.0f, 3.6f);
+            red_hat = false;
+            rb.velocity = new Vector2(xSpeed, ySpeed);
+            xSpeed = UnityEngine.Random.Range(-xSpeedRange, xSpeedRange);
+         
     }
 
     // Update is called once per frame
     void Update()
     {   
-        rb.velocity = new Vector2(xSpeed, rb.velocity.y);   
+            rb.velocity = new Vector2(xSpeed, rb.velocity.y);      
     }
 
 
@@ -62,6 +66,7 @@ public class Hat : MonoBehaviour
             Invoke("Start", 0);
             points++;
             pointsDisplay.text = points.ToString();
+            totalPointsDisplay.text = points.ToString();
             Debug.Log("Points:- "+points);
             
         }
