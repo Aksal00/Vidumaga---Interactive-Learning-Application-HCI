@@ -6,8 +6,9 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     private Rigidbody2D rb;
-    private Animator anim;
-
+    
+    public Hat hat;
+    public Motion motion;
     public GameObject PauseMenu;
     public GameObject Starting_Menu;
 
@@ -24,7 +25,6 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         pos = GetComponent<Transform>();
-        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -46,9 +46,9 @@ public class Player : MonoBehaviour
     private void Movements()
     {
         //rb.velocity = new Vector2(xInput * moveSpeed, rb.velocity.y);
-        if (!PauseMenu.activeSelf && !Starting_Menu.activeSelf)
+        if (!PauseMenu.activeSelf && !Starting_Menu.activeSelf && hat.no_of_chances>0)
         {   
-            anim.enabled = true;
+            motion.anim.enabled = true;
             Vector3 Mouse_Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Mouse_Position.z =0f;
             if (pos.position.x < (Mouse_Position.x-0.2))
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            anim.enabled = false;
+            motion.anim.enabled = false;
         }
     }
 
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
         else{
             IsMoving = false;
         }
-        anim.SetBool("IsMoving",IsMoving);  
+        motion.anim.SetBool("IsMoving",IsMoving);  
 
     }
     private void flip()

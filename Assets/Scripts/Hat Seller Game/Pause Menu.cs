@@ -12,29 +12,23 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject Hat;
 
-    public GameObject Seller;
-    private Rigidbody2D rb1;
+    public Hat hat;
 
-    private Rigidbody2D rb2;
+    public GameObject Seller;
+    public Motion motion;
     public bool isPaused;
 
     public Button Pause_Button;
     public Button Resume_Button;
     public Button Ready_Button;
 
-    void Start()
+    public void Start()
     {
-        pauseMenu.SetActive(false);
-        rb1 = Hat.GetComponent<Rigidbody2D>();
-        rb2 = Seller.GetComponent<Rigidbody2D>();
-        
+        pauseMenu.SetActive(false);   
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-         
+    public void Update()
+    {   
         Pause_Button.onClick.AddListener(PauseGame);
         Resume_Button.onClick.AddListener(ResumeGame);
         
@@ -48,27 +42,26 @@ public class PauseMenu : MonoBehaviour
             {
                 PauseGame();
             }
-        }
-        
-        
+        }  
         
     }
 
     public void PauseGame()
     {
-        pauseMenu.SetActive(true);
-        //Time.timeScale = 0f;
+        if(hat.no_of_chances >0)
+        {
+            pauseMenu.gameObject.SetActive(true);
+            isPaused = true;
+            motion.rb1.simulated = false;
+            motion.rb2.simulated = false;
+        }
         
-        rb1.simulated = false;
-        rb2.simulated = false;
-        isPaused = true;
     }
     public void ResumeGame()
     {
-        pauseMenu.SetActive(false);
-        //Time.timeScale = 1f;
+        pauseMenu.gameObject.SetActive(false);
         isPaused = false;
-        rb1.simulated = true;
-        rb2.simulated = true;
+        motion.rb1.simulated = true;
+        motion.rb2.simulated = true;
     }
 }
