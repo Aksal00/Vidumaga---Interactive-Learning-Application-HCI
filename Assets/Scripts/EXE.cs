@@ -14,6 +14,8 @@ public class EXE : MonoBehaviour
 
     [SerializeField] private GameObject Hand;
     [SerializeField] private GameObject HandManager;
+
+    //[SerializeField] private GameObject Loading_Panel;
     
     int state;
     public void execontroller(int state)
@@ -25,6 +27,9 @@ public class EXE : MonoBehaviour
                 newprocess.Start();
                 Hand.gameObject.SetActive(true);
                 HandManager.gameObject.SetActive(true);
+                //Loading_Panel.gameObject.SetActive(true);
+
+
         }
         if (state == 0){
                 
