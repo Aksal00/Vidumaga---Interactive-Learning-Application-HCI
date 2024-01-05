@@ -6007,7 +6007,7 @@ MonoBehaviour:
   Button_8: {fileID: 0}
   Button_9: {fileID: 0}
   Button_10: {fileID: 0}
-  Instructor_Button: {fileID: 0}
+  Instructor_Button: {fileID: 818363659}
   Instructor_Audio_No: 0
 --- !u!4 &1476498322
 Transform:

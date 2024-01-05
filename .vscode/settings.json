@@ -58,6 +58,7 @@
     },
     "dotnet.defaultSolution": "Vidumaga---Interactive-Learning-Application-HCI.sln",
     "cSpell.words": [
+        "eventtype",
         "execontroller",
         "newprocess",
         "Rigidbody"

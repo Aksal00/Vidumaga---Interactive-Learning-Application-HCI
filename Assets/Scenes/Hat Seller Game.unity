@@ -842,6 +842,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221971190}
   m_CullTransparentMesh: 1
+--- !u!1 &277548761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 277548763}
+  - component: {fileID: 277548762}
+  m_Layer: 0
+  m_Name: Scene Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &277548762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277548761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18e72be51590f24a9c50a34ba4d58a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BG_Audio_No: 3
+  Button_1: {fileID: 0}
+  Button_2: {fileID: 0}
+  Button_3: {fileID: 0}
+  Button_4: {fileID: 0}
+  Button_5: {fileID: 0}
+  Button_6: {fileID: 0}
+  Button_7: {fileID: 0}
+  Button_8: {fileID: 0}
+  Button_9: {fileID: 0}
+  Button_10: {fileID: 0}
+  Instructor_Button: {fileID: 0}
+  Instructor_Audio_No: 0
+--- !u!4 &277548763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277548761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 799.38293, y: 523.05176, z: 9.047819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281407646
 GameObject:
   m_ObjectHideFlags: 0
@@ -7223,3 +7280,4 @@ SceneRoots:
   - {fileID: 557285629}
   - {fileID: 1625844429}
   - {fileID: 364888995}
+  - {fileID: 277548763}
