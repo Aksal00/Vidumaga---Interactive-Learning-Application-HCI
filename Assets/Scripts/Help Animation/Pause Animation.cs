@@ -19,7 +19,7 @@ public class PauseAnimation : MonoBehaviour
         background.alpha = 0;
         background.LeanAlpha(1,0.4f);
         //Instructor
-        instructor_button.localPosition = new Vector2(500,-Screen.height);
+        instructor_button.localPosition = new Vector2(0,-Screen.height);
         instructor_button.LeanMoveLocalY(-300,0.5f).setEaseOutExpo().delay = 0.1f;
         instructor_button.LeanMoveLocalX(0,0.5f).setEaseOutExpo().delay = 0.1f;
         //dialog_box
@@ -52,7 +52,6 @@ public class PauseAnimation : MonoBehaviour
         instructor_button.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
 
         dialog_box.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
-        
         button1.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
         button2.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
         button3.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo().setOnComplete(OnComplete);
