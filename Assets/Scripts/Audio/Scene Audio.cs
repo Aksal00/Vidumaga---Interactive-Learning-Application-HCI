@@ -87,21 +87,21 @@ public class SceneAudio : MonoBehaviour
     }
 
     void play_scene_bg_audio(){
-        GameObject[] BG_Audio_files = { BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4 };
+        GameObject[] BG_Audio_files = {BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4 };
         
         
         for(i = 0; i < BG_Audio_files.Length;i++){
-            if (BG_Audio_No == i){
+            if (BG_Audio_No == (i+1)){
                 if (BG_Audio_No!= previous){
-                    AudioSource audioSource = BG_Audio_files[i].GetComponent<AudioSource>();
-                    audioSource.enabled = true;
+                    AudioSource bg_audioSource = BG_Audio_files[i].GetComponent<AudioSource>();
+                    bg_audioSource.enabled = true;
                     AudioSource audioSource_previous = BG_Audio_files[previous].GetComponent<AudioSource>();
                     audioSource_previous.enabled = false;
                     previous = i;  
                 }
                 else{
-                    AudioSource audioSource = BG_Audio_files[i].GetComponent<AudioSource>();
-                    audioSource.enabled = true;
+                    AudioSource bg_audioSource = BG_Audio_files[i].GetComponent<AudioSource>();
+                    bg_audioSource.enabled = true;
                 }
                 
             }
@@ -113,8 +113,8 @@ public class SceneAudio : MonoBehaviour
     void stop_scene_bg_audio(GameObject parent){
         foreach (Transform child in parent.transform)
         {
-            AudioSource audioSource = child.GetComponent<AudioSource>();
-            audioSource.enabled =false;
+            AudioSource bg_audioSource = child.GetComponent<AudioSource>();
+            bg_audioSource.enabled =false;
         }
     }
 
@@ -137,7 +137,7 @@ public class SceneAudio : MonoBehaviour
             eventtype3.eventID = EventTriggerType.PointerDown;
             eventtype3.callback.AddListener((eventData) => { Button_Pointer_Down(1); });
 
-            for(i=0; i< Button_list_1.Length;i++){
+            for(int i=0; i< Button_list_1.Length;i++){
                 Button_list_1[i].AddComponent<EventTrigger>();
                 Button_list_1[i].GetComponent<EventTrigger>().triggers.Add(eventtype1);
                 Button_list_1[i].GetComponent<EventTrigger>().triggers.Add(eventtype2);
@@ -169,8 +169,8 @@ public class SceneAudio : MonoBehaviour
     void Button_Hover(int button_category){
         if (button_category == 1){ 
             GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio};
-            AudioSource audioSource = Button_Audio_files[0].GetComponent<AudioSource>();
-            audioSource.enabled =true;
+            AudioSource button_audioSource = Button_Audio_files[0].GetComponent<AudioSource>();
+            button_audioSource.enabled =true;
         }
         else if (button_category == 3){
             GameObject[] Instructor_Audio_Short={Short_1,Short_2};
@@ -178,8 +178,8 @@ public class SceneAudio : MonoBehaviour
             int random_no = rnd.Next(1,Instructor_Audio_Short.Length+1);
             for(int i=1;i<(Instructor_Audio_Short.Length+1);i++)
             if (random_no == i){
-                AudioSource audioSource = Instructor_Audio_Short[i-1].GetComponent<AudioSource>();
-                audioSource.enabled =true;
+                AudioSource button_audioSource = Instructor_Audio_Short[i-1].GetComponent<AudioSource>();
+                button_audioSource.enabled =true;
             } 
         } 
 
@@ -187,16 +187,16 @@ public class SceneAudio : MonoBehaviour
     void Button_Hover_Exit(int button_category){
         if (button_category == 1){ 
             GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio};
-            AudioSource audioSource = Button_Audio_files[0].GetComponent<AudioSource>();
-            audioSource.enabled =false;
-            AudioSource audioSource2 = Button_Audio_files[1].GetComponent<AudioSource>();
-            audioSource2.enabled =false;
+            AudioSource button_audioSource = Button_Audio_files[0].GetComponent<AudioSource>();
+            button_audioSource.enabled =false;
+            AudioSource button_audioSource2 = Button_Audio_files[1].GetComponent<AudioSource>();
+            button_audioSource2.enabled =false;
         }
         else if (button_category == 3){
             GameObject[] Instructor_Audio_Short={Short_1,Short_2};
             for(int i=1;i<(Instructor_Audio_Short.Length+1);i++){
-                AudioSource audioSource = Instructor_Audio_Short[i-1].GetComponent<AudioSource>();
-                audioSource.enabled =false;
+                AudioSource button_audioSource = Instructor_Audio_Short[i-1].GetComponent<AudioSource>();
+                button_audioSource.enabled =false;
             }
 
         }
@@ -204,8 +204,8 @@ public class SceneAudio : MonoBehaviour
     void Button_Pointer_Down(int button_category){
         if (button_category == 1 ||button_category == 3){ 
             GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio};
-            AudioSource audioSource = Button_Audio_files[1].GetComponent<AudioSource>();
-            audioSource.enabled =true;
+            AudioSource button_audioSource = Button_Audio_files[1].GetComponent<AudioSource>();
+            button_audioSource.enabled =true;
         }
     }
     void Panel_Audio(){

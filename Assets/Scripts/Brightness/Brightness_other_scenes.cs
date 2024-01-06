@@ -13,8 +13,14 @@ public class Brightness_other_screens : MonoBehaviour
 
     void Start()
     {
-        brightness.TryGetSettings(out exposure);
-        AdjustBrightness(StaticData.game_brightness);
+        if(StaticData.game_brightness!=0){
+            brightness.TryGetSettings(out exposure);
+            AdjustBrightness(StaticData.game_brightness);
+        }
+        else{
+            brightness.TryGetSettings(out exposure);
+            AdjustBrightness(1.0f);
+        }
     }
 
     // Update is called once per frame

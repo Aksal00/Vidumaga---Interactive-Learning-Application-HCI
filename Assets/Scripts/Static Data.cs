@@ -7,6 +7,10 @@ public class StaticData : MonoBehaviour
     // Start is called before the first frame update
     public static float game_brightness;
     public static float brightness_slider_value;
+    public static float background_music_volume;
+    public static float background_music_slider_value;
+    public static float Other_sound_volume;
+    public static float Other_sound_slider_value;
     void Start()
     {
         game_brightness = 1.0f;

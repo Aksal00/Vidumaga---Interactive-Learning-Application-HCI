@@ -15,7 +15,12 @@ public class Brightness : MonoBehaviour
 
     void Start()
     {
-        brightnessSlider.value = StaticData.brightness_slider_value;
+        if(StaticData.game_brightness!=0){
+            brightnessSlider.value = StaticData.brightness_slider_value;
+        }
+        else{
+            brightnessSlider.value = 1.0f;
+        }
         
     }
     void Update(){
