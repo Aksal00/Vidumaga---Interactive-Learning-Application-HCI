@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Monkey : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform monkey;
     void Start()
     {
         

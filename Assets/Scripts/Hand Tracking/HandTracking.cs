@@ -24,16 +24,6 @@ public class Hand : MonoBehaviour
     void Start()
     {
         
-        //PythonRunner.RunFile(Hand_Tracking_Module.py);
-        
-        /*PythonEngine.Initialize();
-        using (Py.GIL()) 
-        {
-            
-            var pythonScript=pythonScript.Import(Hand_Tracking_Module);
-             //sample...
-        //your actual Python script content goes here...    
-        }*/
     }
 
     // Update is called once per frame

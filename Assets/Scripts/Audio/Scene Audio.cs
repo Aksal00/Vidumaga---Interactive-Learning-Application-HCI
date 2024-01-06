@@ -40,7 +40,7 @@ public class SceneAudio : MonoBehaviour
     [SerializeField] private GameObject Panel_3;
     [SerializeField] private GameObject Panel_4;
 
-     private GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Button_Hover_Audio,Button_Click_Audio,Short_1,Short_2,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio;
+    private GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Button_Hover_Audio,Button_Click_Audio,Short_1,Short_2,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio;
     
 
     private int i;
