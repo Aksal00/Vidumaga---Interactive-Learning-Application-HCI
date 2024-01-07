@@ -16,59 +16,138 @@ public class SceneAudio : MonoBehaviour
     [Header("Scene BG Audio")]
     [SerializeField] private int BG_Audio_No;
 
-    [Header("Button Category 1")]
-    [SerializeField] private Button Button_1;
-    [SerializeField] private Button Button_2;
-    [SerializeField] private Button Button_3;
-    [SerializeField] private Button Button_4;
-    [SerializeField] private Button Button_5;
+    [Header("Scene Buttons")]
+    [SerializeField] private  Button Button_1;
+    [SerializeField] private  Button Button_2;
+    [SerializeField] private  Button Button_3;
+    [SerializeField] private  Button Button_4;
+    [SerializeField] private  Button Button_5;
+    [SerializeField] private  Button Button_6;
+    [SerializeField] private  Button Button_7;
+    [SerializeField] private  Button Button_8;
+    [SerializeField] private  Button Button_9;
+    [SerializeField] private  Button Button_10;
 
-    [Header("Button Category 2")]
-    [SerializeField] private Button Button_6;
-    [SerializeField] private Button Button_7;
-    [SerializeField] private Button Button_8;
-    [SerializeField] private Button Button_9;
-    [SerializeField] private Button Button_10;
+    [Header("Navigation Buttons")]
+
+    [SerializeField] private  Button Back_Button;
+    [SerializeField] private  Button Home_Button;
+    [SerializeField] private  Button Additional;
 
     [Header("Instructor Button")]
-    [SerializeField] private Button Instructor_Button;
-    [SerializeField] private int Instructor_Audio_No;
+    [SerializeField] private  Button Instructor_Button;
+    [SerializeField] private  int Instructor_Audio_No;
 
     [Header("Dialog Panels")]
-    [SerializeField] private GameObject Panel_1;
-    [SerializeField] private GameObject Panel_2;
-    [SerializeField] private GameObject Panel_3;
-    [SerializeField] private GameObject Panel_4;
+    [SerializeField] private  GameObject Panel_1;
+    [SerializeField] private  GameObject Panel_2;
+    [SerializeField] private  GameObject Panel_3;
+    [SerializeField] private  GameObject Panel_4;
 
-    private GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Button_Hover_Audio,Button_Click_Audio,Short_1,Short_2,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio;
+    public static GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Button_Hover_Audio,Button_Click_Audio_1,Button_Click_Audio_2,Short_1,Short_2,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio;
     
-
+    
     private int i;
     private static int previous=0;
    
     void Start()
     {
-          BG = GameObject.Find("BG");
-          BG_Audio_1 = GameObject.Find("BG_Audio_1");
-          BG_Audio_2 = GameObject.Find("BG_Audio_2");
-          BG_Audio_3 = GameObject.Find("BG_Audio_3");
-          BG_Audio_4 = GameObject.Find("BG_Audio_4");
-          Panel_1_Audio = GameObject.Find("Panel_1_Audio");
-          Panel_2_Audio = GameObject.Find("Panel_2_Audio");
-          Panel_3_Audio = GameObject.Find("Panel_3_Audio");
-          Panel_4_Audio = GameObject.Find("Panel_4_Audio");
-          Button_Hover_Audio = GameObject.Find("Button_Hover_Audio");
-          Button_Click_Audio = GameObject.Find("Button_Click_Audio");
-          Short_1 =GameObject.Find("Short_1");
-          Short_2 = GameObject.Find("Short_2");
-          
-          
+        BG = GameObject.Find("BG");
+        BG_Audio_1 = GameObject.Find("BG_Audio_1");
+        BG_Audio_2 = GameObject.Find("BG_Audio_2");
+        BG_Audio_3 = GameObject.Find("BG_Audio_3");
+        BG_Audio_4 = GameObject.Find("BG_Audio_4");
+        Panel_1_Audio = GameObject.Find("Panel_1_Audio");
+        Panel_2_Audio = GameObject.Find("Panel_2_Audio");
+        Panel_3_Audio = GameObject.Find("Panel_3_Audio");
+        Panel_4_Audio = GameObject.Find("Panel_4_Audio");
+        Button_Hover_Audio = GameObject.Find("Button_Hover_Audio");
+        Button_Click_Audio_1 = GameObject.Find("Button_Click_Audio_1");
+        Button_Click_Audio_2 = GameObject.Find("Button_Click_Audio_2");
+        Short_1 =GameObject.Find("Short_1");
+        Short_2 = GameObject.Find("Short_2");
+
+        EventTrigger.Entry eventtype1 = new EventTrigger.Entry();
+        eventtype1.eventID = EventTriggerType.PointerEnter;
+        eventtype1.callback.AddListener((eventData) => { Button_Hover(1); });
+
+        EventTrigger.Entry eventtype2 = new EventTrigger.Entry();
+        eventtype2.eventID = EventTriggerType.PointerExit;
+        eventtype2.callback.AddListener((eventData) => { Button_Hover_Exit(1); });
+
+        EventTrigger.Entry eventtype3 = new EventTrigger.Entry();
+        eventtype3.eventID = EventTriggerType.PointerDown;
+        eventtype3.callback.AddListener((eventData) => { Button_Pointer_Down(1); });
+
+        Button[] Button_list_1 = { Button_1,Button_2,Button_3,Button_4,Button_5,Button_6,Button_7,Button_8,Button_9,Button_10 };
+        for(int i=0; i< Button_list_1.Length;i++){
+            if (Button_list_1[i]){
+                Button_list_1[i].AddComponent<EventTrigger>();
+                Button_list_1[i].GetComponent<EventTrigger>().triggers.Add(eventtype1);
+                Button_list_1[i].GetComponent<EventTrigger>().triggers.Add(eventtype2);
+                Button_list_1[i].GetComponent<EventTrigger>().triggers.Add(eventtype3);
+            }
+            else{
+                break;
+            }
+        }
+    
+    
+                
+
+        EventTrigger.Entry eventtype4 = new EventTrigger.Entry();
+        eventtype4.eventID = EventTriggerType.PointerEnter;
+        eventtype4.callback.AddListener((eventData) => { Button_Hover(2); });
+
+        EventTrigger.Entry eventtype5 = new EventTrigger.Entry();
+        eventtype5.eventID = EventTriggerType.PointerExit;
+        eventtype5.callback.AddListener((eventData) => { Button_Hover_Exit(2); });
+
+        EventTrigger.Entry eventtype6 = new EventTrigger.Entry();
+        eventtype6.eventID = EventTriggerType.PointerDown;
+        eventtype6.callback.AddListener((eventData) => { Button_Pointer_Down(2); });
+
+        Button[] Button_list_2 = { Back_Button,Home_Button,Additional};
+        for(int i=0; i< Button_list_2.Length;i++){
+            if (Button_list_2[i]){
+                Button_list_2[i].AddComponent<EventTrigger>();
+                Button_list_2[i].GetComponent<EventTrigger>().triggers.Add(eventtype4);
+                Button_list_2[i].GetComponent<EventTrigger>().triggers.Add(eventtype5);
+                Button_list_2[i].GetComponent<EventTrigger>().triggers.Add(eventtype6);
+            }
+            else{
+                break;
+            }
+        }
+    
+
+
+
+    
+        EventTrigger.Entry eventtype7 = new EventTrigger.Entry();
+        eventtype7.eventID = EventTriggerType.PointerEnter;
+        eventtype7.callback.AddListener((eventData) => { Button_Hover(3); });
+
+        EventTrigger.Entry eventtype8 = new EventTrigger.Entry();
+        eventtype8.eventID = EventTriggerType.PointerExit;
+        eventtype8.callback.AddListener((eventData) => { Button_Hover_Exit(3); });
+
+        EventTrigger.Entry eventtype9 = new EventTrigger.Entry();
+        eventtype9.eventID = EventTriggerType.PointerDown;
+        eventtype9.callback.AddListener((eventData) => { Button_Pointer_Down(3); });
+
+        Instructor_Button.AddComponent<EventTrigger>();
+        Instructor_Button.GetComponent<EventTrigger>().triggers.Add(eventtype7);
+        Instructor_Button.GetComponent<EventTrigger>().triggers.Add(eventtype8);
+        Instructor_Button.GetComponent<EventTrigger>().triggers.Add(eventtype9);
+     
     }
 
     // Update is called once per frame
     void Update()
     {
         //
+
         if(AudioManager.bg_music == true)
         {
             play_scene_bg_audio();
@@ -77,30 +156,29 @@ public class SceneAudio : MonoBehaviour
         else{
             stop_scene_bg_audio(BG);
         }
-        Button_audio(1);
-        Button_audio(3);
+        //Button_audio();
         if(AudioManager.bg_sound == true){
             Panel_Audio();
         }
         
 
+        
+
     }
 
     void play_scene_bg_audio(){
-        GameObject[] BG_Audio_files = {BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4 };
-        
-        
+        GameObject[] BG_Audio_files = {BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4 };
         for(i = 0; i < BG_Audio_files.Length;i++){
             if (BG_Audio_No == (i+1)){
                 if (BG_Audio_No!= previous){
-                    AudioSource bg_audioSource = BG_Audio_files[i].GetComponent<AudioSource>();
+                    AudioSource bg_audioSource = BG_Audio_files[i+1].GetComponent<AudioSource>();
                     bg_audioSource.enabled = true;
                     AudioSource audioSource_previous = BG_Audio_files[previous].GetComponent<AudioSource>();
                     audioSource_previous.enabled = false;
-                    previous = i;  
+                    previous = i+1;  
                 }
                 else{
-                    AudioSource bg_audioSource = BG_Audio_files[i].GetComponent<AudioSource>();
+                    AudioSource bg_audioSource = BG_Audio_files[i+1].GetComponent<AudioSource>();
                     bg_audioSource.enabled = true;
                 }
                 
@@ -118,79 +196,33 @@ public class SceneAudio : MonoBehaviour
         }
     }
 
-    public void Button_audio(int button_category){
-        if (button_category == 1){            
-            Button[] Button_list_1 = { Button_1,Button_2,Button_3,Button_4,Button_5 };
-            Button[] Button_list_2 = { Button_6,Button_7,Button_8,Button_9,Button_10 };
-            
-
-
-            EventTrigger.Entry eventtype1 = new EventTrigger.Entry();
-            eventtype1.eventID = EventTriggerType.PointerEnter;
-            eventtype1.callback.AddListener((eventData) => { Button_Hover(1); });
-
-            EventTrigger.Entry eventtype2 = new EventTrigger.Entry();
-            eventtype2.eventID = EventTriggerType.PointerExit;
-            eventtype2.callback.AddListener((eventData) => { Button_Hover_Exit(1); });
-
-            EventTrigger.Entry eventtype3 = new EventTrigger.Entry();
-            eventtype3.eventID = EventTriggerType.PointerDown;
-            eventtype3.callback.AddListener((eventData) => { Button_Pointer_Down(1); });
-
-            for(int i=0; i< Button_list_1.Length;i++){
-                Button_list_1[i].AddComponent<EventTrigger>();
-                Button_list_1[i].GetComponent<EventTrigger>().triggers.Add(eventtype1);
-                Button_list_1[i].GetComponent<EventTrigger>().triggers.Add(eventtype2);
-                Button_list_1[i].GetComponent<EventTrigger>().triggers.Add(eventtype3);
-            }}
-        
-        if (button_category == 3){
-            EventTrigger.Entry eventtype1 = new EventTrigger.Entry();
-            eventtype1.eventID = EventTriggerType.PointerEnter;
-            eventtype1.callback.AddListener((eventData) => { Button_Hover(3); });
-
-            EventTrigger.Entry eventtype2 = new EventTrigger.Entry();
-            eventtype2.eventID = EventTriggerType.PointerExit;
-            eventtype2.callback.AddListener((eventData) => { Button_Hover_Exit(3); });
-
-            EventTrigger.Entry eventtype3 = new EventTrigger.Entry();
-            eventtype3.eventID = EventTriggerType.PointerDown;
-            eventtype3.callback.AddListener((eventData) => { Button_Pointer_Down(3); });
-
-            Instructor_Button.AddComponent<EventTrigger>();
-            Instructor_Button.GetComponent<EventTrigger>().triggers.Add(eventtype1);
-            Instructor_Button.GetComponent<EventTrigger>().triggers.Add(eventtype2);
-            Instructor_Button.GetComponent<EventTrigger>().triggers.Add(eventtype3);
-
-
-        }
-
-    }
     void Button_Hover(int button_category){
-        if (button_category == 1){ 
-            GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio};
+        GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio_1,Button_Click_Audio_2};
+        if (button_category == 1|button_category == 2){  
             AudioSource button_audioSource = Button_Audio_files[0].GetComponent<AudioSource>();
             button_audioSource.enabled =true;
         }
-        else if (button_category == 3){
+        if (button_category == 3 && StaticData.Instructor_voice==true){
             GameObject[] Instructor_Audio_Short={Short_1,Short_2};
             System.Random rnd = new System.Random();
             int random_no = rnd.Next(1,Instructor_Audio_Short.Length+1);
-            for(int i=1;i<(Instructor_Audio_Short.Length+1);i++)
-            if (random_no == i){
-                AudioSource button_audioSource = Instructor_Audio_Short[i-1].GetComponent<AudioSource>();
-                button_audioSource.enabled =true;
-            } 
+            for(int i=1;i<(Instructor_Audio_Short.Length+1);i++){
+                if (random_no == i){
+                    AudioSource button_audioSource = Instructor_Audio_Short[i-1].GetComponent<AudioSource>();
+                    button_audioSource.enabled =true;
+                } 
+            }
         } 
 
     }
     void Button_Hover_Exit(int button_category){
-        if (button_category == 1){ 
-            GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio};
-            AudioSource button_audioSource = Button_Audio_files[0].GetComponent<AudioSource>();
-            button_audioSource.enabled =false;
-            AudioSource button_audioSource2 = Button_Audio_files[1].GetComponent<AudioSource>();
-            button_audioSource2.enabled =false;
+        GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio_1,Button_Click_Audio_2};
+        if (button_category == 1 |button_category == 2){ 
+            for(int i = 0; i< Button_Audio_files.Length;i++)
+            { 
+                AudioSource button_audioSource = Button_Audio_files[i].GetComponent<AudioSource>();
+                button_audioSource.enabled =false;
+            }
         }
         else if (button_category == 3){
             GameObject[] Instructor_Audio_Short={Short_1,Short_2};
@@ -202,26 +234,42 @@ public class SceneAudio : MonoBehaviour
         }
     }
     void Button_Pointer_Down(int button_category){
-        if (button_category == 1 ||button_category == 3){ 
-            GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio};
+        if (button_category == 1 |button_category == 3){ 
+            GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio_1,Button_Click_Audio_2};
             AudioSource button_audioSource = Button_Audio_files[1].GetComponent<AudioSource>();
             button_audioSource.enabled =true;
+            
+            
         }
+        
+        if (button_category == 2){ 
+            GameObject[] Button_Audio_files={Button_Hover_Audio,Button_Click_Audio_1,Button_Click_Audio_2};
+            AudioSource button_audioSource = Button_Audio_files[2].GetComponent<AudioSource>();
+            button_audioSource.enabled =true;
+            
+        }
+
+
     }
     void Panel_Audio(){
         GameObject[] Panel_list = {Panel_1,Panel_2,Panel_3,Panel_4};
         GameObject[] Panel_Audio_list = {Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio};
         for(int k=0;k<Panel_list.Length;k++){
-            if(Panel_list[k].activeSelf){
-                AudioSource panel_audioSource = Panel_Audio_list[k].GetComponent<AudioSource>();
-                panel_audioSource.enabled =true;
-            }
-            else{
-                AudioSource panel_audioSource = Panel_Audio_list[k].GetComponent<AudioSource>();
-                panel_audioSource.enabled =false;
+            if(Panel_list[k] & ((StaticData.Instructor_voice==true)&(AudioManager.bg_sound==true))){
+                if(Panel_list[k].activeSelf){
+                    AudioSource panel_audioSource = Panel_Audio_list[k].GetComponent<AudioSource>();
+                    panel_audioSource.enabled =true;
+                    VolumeManager.Adjust_BG_Volume(0.015f,"dont update");
+                }
+
+                else{
+                    AudioSource panel_audioSource = Panel_Audio_list[k].GetComponent<AudioSource>();
+                    panel_audioSource.enabled =false;
+                    VolumeManager.Adjust_BG_Volume(StaticData.background_music_volume_previous,"update");
+                    
+                }
             }
         }
-
     }
 
 }

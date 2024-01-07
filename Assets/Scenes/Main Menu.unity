@@ -2645,15 +2645,18 @@ MonoBehaviour:
   Button_3: {fileID: 388084867}
   Button_4: {fileID: 152960707}
   Button_5: {fileID: 1187847305}
-  Button_6: {fileID: 0}
-  Button_7: {fileID: 0}
-  Button_8: {fileID: 0}
+  Button_6: {fileID: 1459267166}
+  Button_7: {fileID: 368021657}
+  Button_8: {fileID: 1985950371}
   Button_9: {fileID: 0}
   Button_10: {fileID: 0}
+  Back_Button: {fileID: 0}
+  Home_Button: {fileID: 0}
+  Additional: {fileID: 0}
   Instructor_Button: {fileID: 1187847305}
   Instructor_Audio_No: 0
   Panel_1: {fileID: 715649749}
-  Panel_2: {fileID: 0}
+  Panel_2: {fileID: 663240368}
   Panel_3: {fileID: 0}
   Panel_4: {fileID: 0}
 --- !u!4 &1502488827

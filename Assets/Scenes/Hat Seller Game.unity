@@ -872,18 +872,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG_Audio_No: 3
-  Button_1: {fileID: 0}
-  Button_2: {fileID: 0}
-  Button_3: {fileID: 0}
-  Button_4: {fileID: 0}
-  Button_5: {fileID: 0}
-  Button_6: {fileID: 0}
-  Button_7: {fileID: 0}
-  Button_8: {fileID: 0}
-  Button_9: {fileID: 0}
+  Button_1: {fileID: 2075077143}
+  Button_2: {fileID: 215084220}
+  Button_3: {fileID: 824181323}
+  Button_4: {fileID: 1766436854}
+  Button_5: {fileID: 1589113059}
+  Button_6: {fileID: 651898179}
+  Button_7: {fileID: 1609883889}
+  Button_8: {fileID: 1325933514}
+  Button_9: {fileID: 1765739986}
   Button_10: {fileID: 0}
-  Instructor_Button: {fileID: 0}
+  Back_Button: {fileID: 0}
+  Home_Button: {fileID: 0}
+  Additional: {fileID: 0}
+  Instructor_Button: {fileID: 651898179}
   Instructor_Audio_No: 0
+  Panel_1: {fileID: 2131795576}
+  Panel_2: {fileID: 1625844423}
+  Panel_3: {fileID: 557285623}
+  Panel_4: {fileID: 0}
 --- !u!4 &277548763
 Transform:
   m_ObjectHideFlags: 0
@@ -2957,6 +2964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210508235a86dfc429318d93c23cb313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monkey: {fileID: 0}
 --- !u!1 &1087393971
 GameObject:
   m_ObjectHideFlags: 0

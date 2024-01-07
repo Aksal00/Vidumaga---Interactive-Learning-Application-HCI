@@ -23,6 +23,12 @@ public class AudioManager : MonoBehaviour
     {
         Debug.Log("bg_music :-"+bg_music);
         Debug.Log("bg_sound :-"+bg_sound);
+
+        if (StaticData.Instructor_voice==true&& bg_sound==false){
+            Sound_Off_Button.gameObject.SetActive(false);
+            Sound_Button.gameObject.SetActive(true);
+            bg_sound=true;
+        }
     }
     
     public void bg_music_on(){
@@ -33,8 +39,11 @@ public class AudioManager : MonoBehaviour
     }
     public void sound_on(){
         bg_sound = true;
+        StaticData.Instructor_voice = true;
     }
     public void sound_off(){
         bg_sound = false;
+        StaticData.Instructor_voice = false;
+
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,43 +10,73 @@ public class VolumeManager : MonoBehaviour
     public Slider bg_music_slider;
     public Slider other_sound_slider;
 
-    private GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4;
+    public Toggle instructor_voice_toggle;
+
+    private static GameObject BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio;
+    
     void Start()
     {
-        BG = GameObject.Find("BG");
-        BG_Audio_1 = GameObject.Find("BG_Audio_1");
-        BG_Audio_2 = GameObject.Find("BG_Audio_2");
-        BG_Audio_3 = GameObject.Find("BG_Audio_3");
-        BG_Audio_4 = GameObject.Find("BG_Audio_4");
-        
         
         if(StaticData.background_music_volume!=0){
             bg_music_slider.value = StaticData.background_music_volume;
         }
         else{
-            bg_music_slider.value = 0.08f;
+            bg_music_slider.value = 0.03f;
         }
+        if(StaticData.Other_sound_volume!=0){
+            other_sound_slider.value = StaticData.Other_sound_volume;
+        }
+        else{
+            other_sound_slider.value = 0.5f;
+        }
+        if(StaticData.Instructor_voice == false){
+            instructor_voice_toggle.isOn = false;
+        }
+        else{
+            instructor_voice_toggle.isOn = true;
+        } 
         
     }
     void Update(){
-
-        Adjust_BG_Volume(bg_music_slider.value);
+        Adjust_BG_Volume(bg_music_slider.value, "update");
+        Adjust_Other_Sound_Volume(other_sound_slider.value);
     }
    
     // Update is called once per frame
-    public void Adjust_BG_Volume(float value)
+    public static void Adjust_BG_Volume(float value,string update)
     {
-        
-        
-        GameObject[] BG_Audio_files = {BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4 };
-        for(int i = 0; i < BG_Audio_files.Length;i++){
-                    AudioSource audioSource = BG_Audio_files[i].GetComponent<AudioSource>();
-                    audioSource.volume= value;
-                    StaticData.background_music_volume= value;
-                    StaticData.background_music_slider_value= value;
-        }
+        StaticData.background_music_volume= value;
+        StaticData.background_music_slider_value= value;
+        if (update == "update"){
+            StaticData.background_music_volume_previous = value;
+        }    
         Debug.Log("BG_Music_Volume = "+StaticData.background_music_volume);
-        
+    }
+    public void Adjust_Other_Sound_Volume(float value){
+
+        StaticData.Other_sound_volume= value;
+        StaticData.Other_sound_slider_value= value;
+        Debug.Log("Other_Sound_Volume = "+StaticData.Other_sound_volume);
+    }
+    
+    public void toggle_management(){
+
 
     }
+    public void disable_instructor_voice(){
+
+        bool current_status = StaticData.Instructor_voice;
+        if(current_status==true){
+            
+            StaticData.Instructor_voice = false;
+            instructor_voice_toggle.isOn = false;
+        }
+        if(current_status==false){
+            StaticData.Instructor_voice = true;
+            instructor_voice_toggle.isOn = true;
+        }
+
+    }
+
+
 }

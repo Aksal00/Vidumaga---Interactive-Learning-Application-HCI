@@ -6167,21 +6167,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BG_Audio_No: 4
-  Button_1: {fileID: 0}
-  Button_2: {fileID: 0}
-  Button_3: {fileID: 0}
-  Button_4: {fileID: 0}
-  Button_5: {fileID: 0}
-  Button_6: {fileID: 0}
+  Button_1: {fileID: 1058246329}
+  Button_2: {fileID: 1089710026}
+  Button_3: {fileID: 332838973}
+  Button_4: {fileID: 1909005250}
+  Button_5: {fileID: 383883558}
+  Button_6: {fileID: 1995391647}
   Button_7: {fileID: 0}
   Button_8: {fileID: 0}
   Button_9: {fileID: 0}
   Button_10: {fileID: 0}
-  Instructor_Button: {fileID: 0}
+  Back_Button: {fileID: 301665586}
+  Home_Button: {fileID: 1224950918}
+  Additional: {fileID: 0}
+  Instructor_Button: {fileID: 1058246329}
   Instructor_Audio_No: 0
-  Panel_1: {fileID: 0}
-  Panel_2: {fileID: 0}
-  Panel_3: {fileID: 0}
+  Panel_1: {fileID: 1660910337}
+  Panel_2: {fileID: 25506691}
+  Panel_3: {fileID: 427664055}
   Panel_4: {fileID: 0}
 --- !u!4 &1858151036
 Transform:
