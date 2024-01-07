@@ -70,7 +70,7 @@ public class Side_Panel_Audio : MonoBehaviour
         GameObject[] Button_Audio_files={Button_Click_Audio_3,Button_Click_Audio_4};
         if (button_category == 1 ){ 
             AudioSource button_audioSource = Button_Audio_files[0].GetComponent<AudioSource>();
-            //button_audioSource.enabled = true;
+            button_audioSource.enabled = true;
            
         }
         
