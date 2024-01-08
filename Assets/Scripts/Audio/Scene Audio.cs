@@ -43,8 +43,17 @@ public class SceneAudio : MonoBehaviour
     [SerializeField] private  GameObject Panel_2;
     [SerializeField] private  GameObject Panel_3;
     [SerializeField] private  GameObject Panel_4;
+    [SerializeField] private  GameObject Panel_5;
+    [SerializeField] private  GameObject Panel_6;
+    [SerializeField] private  GameObject Panel_7;
+    [SerializeField] private  GameObject Panel_8;
+    [SerializeField] private  GameObject Panel_9;
+    [SerializeField] private  GameObject Panel_10;
+    [SerializeField] private  GameObject Panel_11;
+    [SerializeField] private  GameObject Panel_12;
+    [SerializeField] private  GameObject Panel_13;
 
-    public static GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Button_Hover_Audio,Button_Click_Audio_1,Button_Click_Audio_2,Short_1,Short_2,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio;
+    public static GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Button_Hover_Audio,Button_Click_Audio_1,Button_Click_Audio_2,Short_1,Short_2,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio,Panel_5_Audio,Panel_6_Audio,Panel_7_Audio,Panel_8_Audio,Panel_9_Audio,Panel_10_Audio,Panel_11_Audio,Panel_12_Audio,Panel_13_Audio;
     
     
     private int i;
@@ -61,6 +70,15 @@ public class SceneAudio : MonoBehaviour
         Panel_2_Audio = GameObject.Find("Panel_2_Audio");
         Panel_3_Audio = GameObject.Find("Panel_3_Audio");
         Panel_4_Audio = GameObject.Find("Panel_4_Audio");
+        Panel_5_Audio = GameObject.Find("Panel_5_Audio");
+        Panel_6_Audio = GameObject.Find("Panel_6_Audio");
+        Panel_7_Audio = GameObject.Find("Panel_7_Audio");
+        Panel_8_Audio = GameObject.Find("Panel_8_Audio");
+        Panel_9_Audio = GameObject.Find("Panel_9_Audio");
+        Panel_10_Audio = GameObject.Find("Panel_10_Audio");
+        Panel_11_Audio = GameObject.Find("Panel_11_Audio");
+        Panel_12_Audio = GameObject.Find("Panel_12_Audio");
+        Panel_13_Audio = GameObject.Find("Panel_13_Audio");
         Button_Hover_Audio = GameObject.Find("Button_Hover_Audio");
         Button_Click_Audio_1 = GameObject.Find("Button_Click_Audio_1");
         Button_Click_Audio_2 = GameObject.Find("Button_Click_Audio_2");
@@ -91,9 +109,7 @@ public class SceneAudio : MonoBehaviour
                 break;
             }
         }
-    
-    
-                
+            
 
         EventTrigger.Entry eventtype4 = new EventTrigger.Entry();
         eventtype4.eventID = EventTriggerType.PointerEnter;
@@ -146,8 +162,6 @@ public class SceneAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //
-
         if(AudioManager.bg_music == true)
         {
             play_scene_bg_audio();
@@ -209,7 +223,7 @@ public class SceneAudio : MonoBehaviour
             for(int i=1;i<(Instructor_Audio_Short.Length+1);i++){
                 if (random_no == i){
                     AudioSource button_audioSource = Instructor_Audio_Short[i-1].GetComponent<AudioSource>();
-                    button_audioSource.enabled =true;
+                    //button_audioSource.enabled =true;
                 } 
             }
         } 
@@ -252,8 +266,8 @@ public class SceneAudio : MonoBehaviour
 
     }
     void Panel_Audio(){
-        GameObject[] Panel_list = {Panel_1,Panel_2,Panel_3,Panel_4};
-        GameObject[] Panel_Audio_list = {Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio};
+        GameObject[] Panel_list = {Panel_1,Panel_2,Panel_3,Panel_4,Panel_5,Panel_6,Panel_7,Panel_8,Panel_9,Panel_10,Panel_11,Panel_12,Panel_13};
+        GameObject[] Panel_Audio_list = {Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio,Panel_5_Audio,Panel_6_Audio,Panel_7_Audio,Panel_8_Audio,Panel_9_Audio,Panel_10_Audio,Panel_11_Audio,Panel_12_Audio,Panel_13_Audio};
         for(int k=0;k<Panel_list.Length;k++){
             if(Panel_list[k] & ((StaticData.Instructor_voice==true)&(AudioManager.bg_sound==true))){
                 if(Panel_list[k].activeSelf){

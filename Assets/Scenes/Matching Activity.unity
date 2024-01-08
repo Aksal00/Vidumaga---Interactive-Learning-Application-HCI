@@ -528,7 +528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1809cc14c6ed28b468a59fff67a77bc6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53100cc40e3690247b87ea885468c735, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6182,10 +6182,18 @@ MonoBehaviour:
   Additional: {fileID: 0}
   Instructor_Button: {fileID: 1058246329}
   Instructor_Audio_No: 0
-  Panel_1: {fileID: 1660910337}
-  Panel_2: {fileID: 25506691}
-  Panel_3: {fileID: 427664055}
-  Panel_4: {fileID: 0}
+  Panel_1: {fileID: 0}
+  Panel_2: {fileID: 0}
+  Panel_3: {fileID: 0}
+  Panel_4: {fileID: 427664055}
+  Panel_5: {fileID: 25506691}
+  Panel_6: {fileID: 1660910337}
+  Panel_7: {fileID: 0}
+  Panel_8: {fileID: 0}
+  Panel_9: {fileID: 0}
+  Panel_10: {fileID: 0}
+  Panel_11: {fileID: 0}
+  Panel_12: {fileID: 0}
 --- !u!4 &1858151036
 Transform:
   m_ObjectHideFlags: 0

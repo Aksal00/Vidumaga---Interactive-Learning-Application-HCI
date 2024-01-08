@@ -2659,6 +2659,14 @@ MonoBehaviour:
   Panel_2: {fileID: 663240368}
   Panel_3: {fileID: 0}
   Panel_4: {fileID: 0}
+  Panel_5: {fileID: 0}
+  Panel_6: {fileID: 0}
+  Panel_7: {fileID: 0}
+  Panel_8: {fileID: 0}
+  Panel_9: {fileID: 0}
+  Panel_10: {fileID: 0}
+  Panel_11: {fileID: 0}
+  Panel_12: {fileID: 0}
 --- !u!4 &1502488827
 Transform:
   m_ObjectHideFlags: 0
@@ -2953,7 +2961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9dfd0fb2313023d419e38fd0409f7ba6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8bcdd466f1577f749a13783f9be0de30, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

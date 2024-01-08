@@ -758,10 +758,19 @@ MonoBehaviour:
   Additional: {fileID: 0}
   Instructor_Button: {fileID: 1376134179}
   Instructor_Audio_No: 0
-  Panel_1: {fileID: 311252012}
+  Panel_1: {fileID: 0}
   Panel_2: {fileID: 0}
   Panel_3: {fileID: 0}
   Panel_4: {fileID: 0}
+  Panel_5: {fileID: 0}
+  Panel_6: {fileID: 0}
+  Panel_7: {fileID: 0}
+  Panel_8: {fileID: 0}
+  Panel_9: {fileID: 0}
+  Panel_10: {fileID: 311252012}
+  Panel_11: {fileID: 0}
+  Panel_12: {fileID: 0}
+  Panel_13: {fileID: 0}
 --- !u!4 &593744216
 Transform:
   m_ObjectHideFlags: 0

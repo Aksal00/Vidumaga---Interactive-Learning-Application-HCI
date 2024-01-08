@@ -3198,7 +3198,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 470}
-  m_SizeDelta: {x: 600, y: 150}
+  m_SizeDelta: {x: 550, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &819546761
 MonoBehaviour:
@@ -6165,10 +6165,18 @@ MonoBehaviour:
   Additional: {fileID: 0}
   Instructor_Button: {fileID: 818363659}
   Instructor_Audio_No: 0
-  Panel_1: {fileID: 1102079605}
+  Panel_1: {fileID: 0}
   Panel_2: {fileID: 0}
-  Panel_3: {fileID: 0}
+  Panel_3: {fileID: 1102079605}
   Panel_4: {fileID: 0}
+  Panel_5: {fileID: 0}
+  Panel_6: {fileID: 0}
+  Panel_7: {fileID: 0}
+  Panel_8: {fileID: 0}
+  Panel_9: {fileID: 0}
+  Panel_10: {fileID: 0}
+  Panel_11: {fileID: 0}
+  Panel_12: {fileID: 0}
 --- !u!4 &1476498322
 Transform:
   m_ObjectHideFlags: 0

@@ -1662,10 +1662,19 @@ MonoBehaviour:
   Additional: {fileID: 0}
   Instructor_Button: {fileID: 52064483}
   Instructor_Audio_No: 0
-  Panel_1: {fileID: 86228637}
-  Panel_2: {fileID: 167561038}
+  Panel_1: {fileID: 0}
+  Panel_2: {fileID: 0}
   Panel_3: {fileID: 0}
   Panel_4: {fileID: 0}
+  Panel_5: {fileID: 0}
+  Panel_6: {fileID: 0}
+  Panel_7: {fileID: 0}
+  Panel_8: {fileID: 167561038}
+  Panel_9: {fileID: 86228637}
+  Panel_10: {fileID: 0}
+  Panel_11: {fileID: 0}
+  Panel_12: {fileID: 0}
+  Panel_13: {fileID: 0}
 --- !u!4 &288961817
 Transform:
   m_ObjectHideFlags: 0
@@ -4353,8 +4362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 470}
-  m_SizeDelta: {x: 800, y: 150}
+  m_AnchoredPosition: {x: 0, y: 520}
+  m_SizeDelta: {x: 800, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508879160
 MonoBehaviour:
