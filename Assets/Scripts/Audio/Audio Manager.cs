@@ -40,10 +40,12 @@ public class AudioManager : MonoBehaviour
     public void sound_on(){
         bg_sound = true;
         StaticData.Instructor_voice = true;
+        StaticData.game_voices = true;
     }
     public void sound_off(){
         bg_sound = false;
         StaticData.Instructor_voice = false;
+        StaticData.game_voices = false;
 
     }
 }

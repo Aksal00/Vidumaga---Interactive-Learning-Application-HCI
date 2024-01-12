@@ -21,10 +21,12 @@ public class Player : MonoBehaviour
     
     [SerializeField] private bool IsMoving;
     
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         pos = GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
@@ -98,6 +100,14 @@ public class Player : MonoBehaviour
         {
             flip();
         }
+    }
+    public static void Seller_voice()
+    {
+            if(StaticData.game_voices == true){
+                GameObject seller_voice = GameObject.Find("Seller Voice");
+                AudioSource seller_voice_audioSource = seller_voice.GetComponent<AudioSource>();
+                seller_voice_audioSource.enabled = true;     
+            }
     }
 
 

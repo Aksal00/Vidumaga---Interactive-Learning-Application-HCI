@@ -27,6 +27,7 @@ public class CountdownController : MonoBehaviour
         }
 
         countdownDisplay.text = "Go!";
+        Player.Seller_voice();
         yield return new WaitForSeconds(1F);  
         countdownDisplay.gameObject.SetActive(false);
         yield return new WaitForSeconds(1F);

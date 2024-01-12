@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InstructorAnimation : MonoBehaviour
@@ -19,8 +20,11 @@ public class InstructorAnimation : MonoBehaviour
     public Transform button2;
     
     public CanvasGroup background;
+    
+
     private void OnEnable()
     {
+        //ameObject instructor_voice = GameObject.Find("Instructor Voice");
         background.alpha = 0;
         background.LeanAlpha(1,0.4f);
         //Instructor
@@ -54,6 +58,7 @@ public class InstructorAnimation : MonoBehaviour
     // Update is called once per frame
     public void CloseInstructor()
     {
+        
         background.LeanAlpha(0,0.5f);
         instructor.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
 
@@ -65,10 +70,14 @@ public class InstructorAnimation : MonoBehaviour
             button1.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
             button2.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo().setOnComplete(OnComplete);
         }
+        
+        
     }
 
     void OnComplete(){
         gameObject.SetActive(false);
+        
+        
     }
 
 

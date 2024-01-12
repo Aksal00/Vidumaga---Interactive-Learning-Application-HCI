@@ -12,7 +12,6 @@ public class VolumeManager : MonoBehaviour
 
     public Toggle instructor_voice_toggle;
 
-    private static GameObject BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio;
     
     void Start()
     {

@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using JetBrains.Annotations;
+using System.Runtime.CompilerServices;
 
 
 public class SceneAudio : MonoBehaviour
@@ -52,8 +53,8 @@ public class SceneAudio : MonoBehaviour
     [SerializeField] private  GameObject Panel_11;
     [SerializeField] private  GameObject Panel_12;
     [SerializeField] private  GameObject Panel_13;
-
-    public static GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Button_Hover_Audio,Button_Click_Audio_1,Button_Click_Audio_2,Short_1,Short_2,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio,Panel_5_Audio,Panel_6_Audio,Panel_7_Audio,Panel_8_Audio,Panel_9_Audio,Panel_10_Audio,Panel_11_Audio,Panel_12_Audio,Panel_13_Audio;
+    //[SerializeField] private GameObject Panel_14;
+    public static GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Button_Hover_Audio,Button_Click_Audio_1,Button_Click_Audio_2,Short_1,Short_2,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio,Panel_5_Audio,Panel_6_Audio,Panel_7_Audio,Panel_8_Audio,Panel_9_Audio,Panel_10_Audio,Panel_11_Audio,Panel_12_Audio,Panel_13_Audio,collected_audio,dropped_audio;
     
     
     private int i;
@@ -84,6 +85,8 @@ public class SceneAudio : MonoBehaviour
         Button_Click_Audio_2 = GameObject.Find("Button_Click_Audio_2");
         Short_1 =GameObject.Find("Short_1");
         Short_2 = GameObject.Find("Short_2");
+        collected_audio = GameObject.Find("Collected Audio");
+        dropped_audio = GameObject.Find("Dropped Audio");
 
         EventTrigger.Entry eventtype1 = new EventTrigger.Entry();
         eventtype1.eventID = EventTriggerType.PointerEnter;
@@ -269,11 +272,12 @@ public class SceneAudio : MonoBehaviour
         GameObject[] Panel_list = {Panel_1,Panel_2,Panel_3,Panel_4,Panel_5,Panel_6,Panel_7,Panel_8,Panel_9,Panel_10,Panel_11,Panel_12,Panel_13};
         GameObject[] Panel_Audio_list = {Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio,Panel_5_Audio,Panel_6_Audio,Panel_7_Audio,Panel_8_Audio,Panel_9_Audio,Panel_10_Audio,Panel_11_Audio,Panel_12_Audio,Panel_13_Audio};
         for(int k=0;k<Panel_list.Length;k++){
+
             if(Panel_list[k] & ((StaticData.Instructor_voice==true)&(AudioManager.bg_sound==true))){
                 if(Panel_list[k].activeSelf){
                     AudioSource panel_audioSource = Panel_Audio_list[k].GetComponent<AudioSource>();
                     panel_audioSource.enabled =true;
-                    VolumeManager.Adjust_BG_Volume(0.015f,"dont update");
+                    VolumeManager.Adjust_BG_Volume(0.015f,"dont_update");
                 }
 
                 else{
@@ -282,6 +286,34 @@ public class SceneAudio : MonoBehaviour
                     VolumeManager.Adjust_BG_Volume(StaticData.background_music_volume_previous,"update");
                     
                 }
+            }
+        }
+    }
+    public static void game_audio(string audio_name){
+        if(StaticData.game_voices == true){
+            if (audio_name == "seller_voice"){
+                    GameObject seller_voice = GameObject.Find("Seller Voice");
+                    AudioSource seller_audioSource = seller_voice.GetComponent<AudioSource>();
+                    seller_audioSource.enabled = false;
+                    seller_audioSource.enabled = true;
+            }
+            if (audio_name == "collected"){
+                    GameObject Collected_Audio = GameObject.Find("Collected Audio");
+                    AudioSource collected_audioSource = Collected_Audio.GetComponent<AudioSource>();
+                    collected_audioSource.enabled = false;
+                    collected_audioSource.enabled = true;
+            }
+            if(audio_name == "dropped"){
+                    GameObject Dropped_Audio = GameObject.Find("Dropped Audio");
+                    AudioSource dropped_audioSource = Dropped_Audio.GetComponent<AudioSource>();
+                    dropped_audioSource.enabled = false;
+                    dropped_audioSource.enabled = true;
+            }
+            if(audio_name == "applause"){
+                    GameObject Applause_Audio = GameObject.Find("Applause Audio");
+                    AudioSource applause_audioSource = Applause_Audio.GetComponent<AudioSource>();
+                    applause_audioSource.enabled = false;
+                    applause_audioSource.enabled = true;
             }
         }
     }
