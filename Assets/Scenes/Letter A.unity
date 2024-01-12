@@ -738,6 +738,7 @@ MonoBehaviour:
   instructor: {fileID: 1962518472}
   dialog_box: {fileID: 1845033289}
   no_of_buttons: 2
+  notification_audio_type: 3
   button: {fileID: 0}
   button1: {fileID: 1521014852}
   button2: {fileID: 554111996}
@@ -1223,6 +1224,7 @@ MonoBehaviour:
   instructor: {fileID: 795789083}
   dialog_box: {fileID: 1774574397}
   no_of_buttons: 1
+  notification_audio_type: 1
   button: {fileID: 107788809}
   button1: {fileID: 0}
   button2: {fileID: 0}

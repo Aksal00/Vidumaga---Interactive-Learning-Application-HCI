@@ -13,11 +13,13 @@ public class StaticData : MonoBehaviour
     public static float background_music_slider_value;
     public static float Other_sound_volume;
     public static float Other_sound_slider_value;
+    public static bool panel_status;
     public static GameObject BG,BG_Audio_1,BG_Audio_2,BG_Audio_3,BG_Audio_4,Panel_1_Audio,Panel_2_Audio,Panel_3_Audio,Panel_4_Audio,Panel_5_Audio,Panel_6_Audio,Panel_7_Audio,Panel_8_Audio,Panel_9_Audio,Panel_10_Audio,Panel_11_Audio,Panel_12_Audio,Panel_13_Audio,seller_voice,monkey_voice,collected_audio,dropped_audio,applause_audio,notification_on_audio,notification_off_audio;
     public static bool game_voices;
     public static bool Instructor_voice;
     private Scene currentScene ;
     private Scene previousScene;
+    
     void Start()
     {
         game_brightness = 1.0f;
@@ -55,6 +57,7 @@ public class StaticData : MonoBehaviour
         notification_off_audio= GameObject.Find("Notification OFF");
         Scene currentScene = SceneManager.GetActiveScene ();
         previousScene = currentScene;
+        panel_status = false;
 
     }
 

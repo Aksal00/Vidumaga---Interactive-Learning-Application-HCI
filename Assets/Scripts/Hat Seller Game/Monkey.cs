@@ -17,7 +17,7 @@ public class Monkey : MonoBehaviour
             if(StaticData.game_voices == true){
                 GameObject monkey_voice = GameObject.Find("Monkey Voice");
                 AudioSource monkey_voice_audioSource = monkey_voice.GetComponent<AudioSource>();
-                monkey_voice_audioSource.enabled = true;     
+                monkey_voice_audioSource.enabled = true;   
             }
     }
 }

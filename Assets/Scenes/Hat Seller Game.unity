@@ -965,7 +965,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdownTime: 3
   countdownDisplay: {fileID: 75364492}
-  seller: {fileID: 0}
   hat: {fileID: 874373318}
 --- !u!1 &343581029
 GameObject:
@@ -1802,7 +1801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &651898178
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4980,7 +4979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d530210bc20b9ea49a7c36b31acd8b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instructor_button: {fileID: 651898178}
   dialog_box: {fileID: 1683593770}
   button1: {fileID: 824181322}
   button2: {fileID: 1766436853}
@@ -7199,6 +7197,7 @@ MonoBehaviour:
   instructor: {fileID: 571186946}
   dialog_box: {fileID: 557581217}
   no_of_buttons: 2
+  notification_audio_type: 1
   button: {fileID: 0}
   button1: {fileID: 2075077142}
   button2: {fileID: 215084219}

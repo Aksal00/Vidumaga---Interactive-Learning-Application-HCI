@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseAnimation : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform instructor_button;
+    //public Transform instructor_button;
 
     public Transform dialog_box;
     
@@ -18,10 +18,11 @@ public class PauseAnimation : MonoBehaviour
     {
         background.alpha = 0;
         background.LeanAlpha(1,0.4f);
+        StaticData.panel_status = true;
         //Instructor
-        instructor_button.localPosition = new Vector2(0,-Screen.height);
+        /*instructor_button.localPosition = new Vector2(0,-Screen.height);
         instructor_button.LeanMoveLocalY(-300,0.5f).setEaseOutExpo().delay = 0.1f;
-        instructor_button.LeanMoveLocalX(0,0.5f).setEaseOutExpo().delay = 0.1f;
+        instructor_button.LeanMoveLocalX(0,0.5f).setEaseOutExpo().delay = 0.1f;*/
         //dialog_box
         dialog_box.localPosition = new Vector2(0,-Screen.height);
         dialog_box.LeanMoveLocalY(80,0.5f).setEaseOutExpo().delay = 0.1f;
@@ -48,8 +49,9 @@ public class PauseAnimation : MonoBehaviour
     // Update is called once per frame
     public void ClosePauseMenu()
     {
+        StaticData.panel_status = false;
         background.LeanAlpha(0,0.5f);
-        instructor_button.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
+        //instructor_button.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
 
         dialog_box.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
         button1.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();

@@ -23,6 +23,7 @@ public class EndInstructorAnimation : MonoBehaviour
     public CanvasGroup background;
     private void OnEnable()
     {
+        StaticData.panel_status = true;
         background.alpha = 0;
         background.LeanAlpha(1,0.4f);
         //Instructor
@@ -60,6 +61,7 @@ public class EndInstructorAnimation : MonoBehaviour
     // Update is called once per frame
     public void CloseInstructor()
     {
+        StaticData.panel_status = false;
         background.LeanAlpha(0,0.5f);
         instructor.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
         dialog_box.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
@@ -72,6 +74,7 @@ public class EndInstructorAnimation : MonoBehaviour
             button1.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo();
             button2.LeanMoveLocalY(-Screen.height,0.8f).setEaseOutExpo().setOnComplete(OnComplete);
         }
+        
     }
 
     void OnComplete(){

@@ -88,6 +88,7 @@ public class SceneAudio : MonoBehaviour
         collected_audio = GameObject.Find("Collected Audio");
         dropped_audio = GameObject.Find("Dropped Audio");
 
+
         EventTrigger.Entry eventtype1 = new EventTrigger.Entry();
         eventtype1.eventID = EventTriggerType.PointerEnter;
         eventtype1.callback.AddListener((eventData) => { Button_Hover(1); });
@@ -274,16 +275,15 @@ public class SceneAudio : MonoBehaviour
         for(int k=0;k<Panel_list.Length;k++){
 
             if(Panel_list[k] & ((StaticData.Instructor_voice==true)&(AudioManager.bg_sound==true))){
-                if(Panel_list[k].activeSelf){
+                if(Panel_list[k].activeSelf & StaticData.panel_status == true) {
                     AudioSource panel_audioSource = Panel_Audio_list[k].GetComponent<AudioSource>();
                     panel_audioSource.enabled =true;
-                    
+
                 }
-
-                else{
-
+                else if(StaticData.panel_status == false){
                     AudioSource panel_audioSource = Panel_Audio_list[k].GetComponent<AudioSource>();
-                    panel_audioSource.enabled =false; 
+                    panel_audioSource.enabled =false;
+
                 }
             }
         }
@@ -315,16 +315,22 @@ public class SceneAudio : MonoBehaviour
                     applause_audioSource.enabled = true;
             }
             if(audio_name == "notification on"){
-                    GameObject Applause_Audio = GameObject.Find("Notification ON");
-                    AudioSource applause_audioSource = Applause_Audio.GetComponent<AudioSource>();
-                    applause_audioSource.enabled = false;
-                    applause_audioSource.enabled = true;
+                    GameObject notification_on_Audio = GameObject.Find("Notification ON");
+                    AudioSource notification_on_audioSource = notification_on_Audio.GetComponent<AudioSource>();
+                    notification_on_audioSource.enabled = false;
+                    notification_on_audioSource.enabled = true;
             }
             if(audio_name == "notification off"){
-                    GameObject Applause_Audio = GameObject.Find("Notification OFF");
-                    AudioSource applause_audioSource = Applause_Audio.GetComponent<AudioSource>();
-                    applause_audioSource.enabled = false;
-                    applause_audioSource.enabled = true;
+                    GameObject notification_off_Audio = GameObject.Find("Notification OFF");
+                    AudioSource notification_off_audioSource = notification_off_Audio.GetComponent<AudioSource>();
+                    notification_off_audioSource.enabled = false;
+                    notification_off_audioSource.enabled = true;
+            }
+            if(audio_name == "success"){
+                    GameObject Success_Audio = GameObject.Find("Success Audio");
+                    AudioSource success_audioSource = Success_Audio.GetComponent<AudioSource>();
+                    success_audioSource.enabled = false;
+                    success_audioSource.enabled = true;
             }
         }
     }

@@ -56,6 +56,7 @@ public class Hat : MonoBehaviour
                 SceneAudio.game_audio("dropped");
             }
             else if(points>=10){
+                SceneAudio.game_audio("success");
                 SceneAudio.game_audio("applause");
             }else{
                 SceneAudio.game_audio("dropped");
