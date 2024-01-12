@@ -1139,6 +1139,7 @@ MonoBehaviour:
   instructor: {fileID: 452284686}
   dialog_box: {fileID: 1937186013}
   no_of_buttons: 2
+  notification_audio_type: 1
   button: {fileID: 0}
   button1: {fileID: 1459267165}
   button2: {fileID: 368021656}
@@ -1340,6 +1341,7 @@ MonoBehaviour:
   instructor: {fileID: 1939736007}
   dialog_box: {fileID: 1669027814}
   no_of_buttons: 1
+  notification_audio_type: 1
   button: {fileID: 1985950370}
   button1: {fileID: 0}
   button2: {fileID: 0}
@@ -2667,6 +2669,7 @@ MonoBehaviour:
   Panel_10: {fileID: 0}
   Panel_11: {fileID: 0}
   Panel_12: {fileID: 0}
+  Panel_13: {fileID: 0}
 --- !u!4 &1502488827
 Transform:
   m_ObjectHideFlags: 0

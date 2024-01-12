@@ -58,10 +58,6 @@ public class VolumeManager : MonoBehaviour
         Debug.Log("Other_Sound_Volume = "+StaticData.Other_sound_volume);
     }
     
-    public void toggle_management(){
-
-
-    }
     public void disable_instructor_voice(){
 
         bool current_status = StaticData.Instructor_voice;

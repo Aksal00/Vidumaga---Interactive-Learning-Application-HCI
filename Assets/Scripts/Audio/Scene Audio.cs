@@ -277,14 +277,13 @@ public class SceneAudio : MonoBehaviour
                 if(Panel_list[k].activeSelf){
                     AudioSource panel_audioSource = Panel_Audio_list[k].GetComponent<AudioSource>();
                     panel_audioSource.enabled =true;
-                    VolumeManager.Adjust_BG_Volume(0.015f,"dont_update");
+                    
                 }
 
                 else{
+
                     AudioSource panel_audioSource = Panel_Audio_list[k].GetComponent<AudioSource>();
-                    panel_audioSource.enabled =false;
-                    VolumeManager.Adjust_BG_Volume(StaticData.background_music_volume_previous,"update");
-                    
+                    panel_audioSource.enabled =false; 
                 }
             }
         }
@@ -311,6 +310,18 @@ public class SceneAudio : MonoBehaviour
             }
             if(audio_name == "applause"){
                     GameObject Applause_Audio = GameObject.Find("Applause Audio");
+                    AudioSource applause_audioSource = Applause_Audio.GetComponent<AudioSource>();
+                    applause_audioSource.enabled = false;
+                    applause_audioSource.enabled = true;
+            }
+            if(audio_name == "notification on"){
+                    GameObject Applause_Audio = GameObject.Find("Notification ON");
+                    AudioSource applause_audioSource = Applause_Audio.GetComponent<AudioSource>();
+                    applause_audioSource.enabled = false;
+                    applause_audioSource.enabled = true;
+            }
+            if(audio_name == "notification off"){
+                    GameObject Applause_Audio = GameObject.Find("Notification OFF");
                     AudioSource applause_audioSource = Applause_Audio.GetComponent<AudioSource>();
                     applause_audioSource.enabled = false;
                     applause_audioSource.enabled = true;

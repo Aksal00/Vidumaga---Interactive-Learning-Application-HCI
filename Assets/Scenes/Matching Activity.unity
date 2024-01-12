@@ -293,6 +293,7 @@ MonoBehaviour:
   instructor: {fileID: 1532168826}
   dialog_box: {fileID: 2102649152}
   no_of_buttons: 2
+  notification_audio_type: 3
   button: {fileID: 0}
   button1: {fileID: 1089710025}
   button2: {fileID: 332838972}
@@ -2047,6 +2048,7 @@ MonoBehaviour:
   instructor: {fileID: 1855493518}
   dialog_box: {fileID: 89483093}
   no_of_buttons: 1
+  notification_audio_type: 1
   button: {fileID: 1909005249}
   button1: {fileID: 0}
   button2: {fileID: 0}
@@ -5825,6 +5827,7 @@ MonoBehaviour:
   instructor: {fileID: 175548876}
   dialog_box: {fileID: 257937291}
   no_of_buttons: 2
+  notification_audio_type: 2
   button: {fileID: 0}
   button1: {fileID: 383883557}
   button2: {fileID: 1995391646}
