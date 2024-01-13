@@ -841,11 +841,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: VIDUMAGA-2DHandTracking
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: University of Sri Jayewardenepura
+  metroCertificateIssuer: University of Sri Jayewardenepura
+  metroCertificateNotAfter: 00104786f964db01
   metroApplicationDescription: VIDUMAGA - 2D Hand Tracking
   wsaImages: {}
   metroTileShortName: VIDUMAGA - 2D Hand Tracking
