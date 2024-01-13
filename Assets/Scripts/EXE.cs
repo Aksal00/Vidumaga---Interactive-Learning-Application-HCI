@@ -20,7 +20,7 @@ public class EXE : MonoBehaviour
     int state;
     public void execontroller(int state)
     {
-        psi.FileName = "Assets\\Scripts\\Hand Tracking\\HandTrackingEXE\\Hand_Tracking_Module.exe";
+        psi.FileName = "VIDUMAGA_Data\\Hand Recognition Module\\Hand_Tracking_Module.exe";
         newprocess.StartInfo = psi;
         
         if (state == 1){
