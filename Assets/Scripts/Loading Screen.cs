@@ -43,12 +43,6 @@ public class LoadingScreen : MonoBehaviour
 
             while (!activeTitle.ToLower().Contains(title.ToLower()))
             {
-                //Check for timeout
-                //if ((DateTime.Now - startTime).TotalSeconds > seconds) //greater than here
-                                
-
-                //Check every 0.2 seconds
-                //Thread.Sleep(200);
                 activeTitle = GetActiveWindowTitle();
                 return 1;
             }
@@ -69,7 +63,7 @@ public class LoadingScreen : MonoBehaviour
     {
         string windowTitleToCheck = "VIDUMAGA - Hand Gesture Tracker";// Replace with the actual window title
         
-        int result = WaitForActiveWindow(windowTitleToCheck,5);
+        int result = WaitForActiveWindow(windowTitleToCheck,1);
         if (result == 0){
             UnityEngine.Debug.Log("Hand Tracker Loading Has Completed");
             Loading_Panel.gameObject.SetActive(false);
