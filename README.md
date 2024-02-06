@@ -8,6 +8,7 @@ Welcome to Vidumaga, an engaging and interactive application developed using Uni
 
 
 
+
 ![Screenshot (156)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/c356e6ee-d79b-494d-94c7-9256bf702d21)
 
 ![Screenshot (161)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/dde3933c-ddd3-4ccf-b3ca-0ce67beead79)
