@@ -3,7 +3,10 @@
 Welcome to Vidumaga, an engaging and interactive application developed using Unity Game Engine for PC. This educational tool is designed to foster early childhood development through a variety of interactive activities and games. The application supports both traditional mouse input and features a cutting-edge hand recognition system for a truly immersive experience.
 
 
-**Download Vidumaga for Windows:** https://scisjpaclk-my.sharepoint.com/:f:/g/personal/as2020314_sci_sjp_ac_lk/Ekp7END5xo5NuOyJbklE_i4BPjIW-2K3_qzjKk80xYxLOg?e=jaRO1k
+**Download Vidumaga for Windows:** 
+    https://scisjpaclk-my.sharepoint.com/:f:/g/personal/as2020314_sci_sjp_ac_lk/Ekp7END5xo5NuOyJbklE_i4BPjIW-2K3_qzjKk80xYxLOg?e=jaRO1k
+
+
 
 ![Screenshot (156)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/c356e6ee-d79b-494d-94c7-9256bf702d21)
 
