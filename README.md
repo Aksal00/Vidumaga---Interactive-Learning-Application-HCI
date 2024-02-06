@@ -4,7 +4,7 @@ Welcome to Vidumaga, an engaging and interactive application developed using Uni
 
 
 **Download Vidumaga for Windows:** 
-    https://scisjpaclk-my.sharepoint.com/:f:/g/personal/as2020314_sci_sjp_ac_lk/Ekp7END5xo5NuOyJbklE_i4BPjIW-2K3_qzjKk80xYxLOg?e=jaRO1k
+    https://scisjpaclk-my.sharepoint.com/:f:/g/personal/as2020314_sci_sjp_ac_lk/Ekp7END5xo5NuOyJbklE_i4Bxr62AkgHyZZkzmpxQ1fBkw?e=K0iK2F
 
 
 
