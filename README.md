@@ -8,13 +8,13 @@ Welcome to Vidumaga, an engaging and interactive application developed using Uni
 
 ![Screenshot (162)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/09595b1f-67ee-4efc-9f5e-d9fc4e886c1d)
 
-![Screenshot (160)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/629f4d26-21c3-408e-b103-91ceb2034274)
-
 ![Screenshot (159)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/f8b908f8-26f7-4682-8d38-04fc99d41754)
 
-![Screenshot (158)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/1a8608b1-b79e-4631-9cbe-095308b1eac0)
+![Screenshot (160)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/629f4d26-21c3-408e-b103-91ceb2034274)
 
 ![Screenshot (157)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/b87a4f39-5bd0-4d25-8c23-e210ee0b8812)
+
+![Screenshot (158)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/1a8608b1-b79e-4631-9cbe-095308b1eac0)
 
 
 
