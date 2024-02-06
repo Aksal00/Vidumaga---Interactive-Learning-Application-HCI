@@ -6,6 +6,15 @@ Welcome to Vidumaga, an engaging and interactive application developed using Uni
 
 ![Screenshot (161)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/dde3933c-ddd3-4ccf-b3ca-0ce67beead79)
 
+**Key Features:**
+- **Interactive Activities:** Engage children with a range of interactive activities aimed at promoting early learning and development.
+- **Hand Recognition System:** Utilize the hand recognition system to enhance user interaction, providing a hands-on experience for a dynamic and immersive learning environment.
+- **Letter Writing Activity:** Enhance literacy skills with a dedicated letter writing activity, making the learning process fun and engaging.
+- **Line Matching Activities:** Develop cognitive abilities through entertaining line matching activities.
+- **Interactive Game - Hat Seller:** Enjoy an additional interactive game where a hat seller catches hats from mischievous monkeys, adding a delightful and engaging element to the learning experience.
+- **Virtual Assistant for Instructions:** Benefit from a built-in virtual assistant providing clear instructions, guiding children through various activities for a seamless learning experience.
+- **Interactive Audio:** Immerse children in an interactive audio experience, enhancing engagement and making the learning process more enjoyable.
+
 ![Screenshot (162)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/09595b1f-67ee-4efc-9f5e-d9fc4e886c1d)
 
 ![Screenshot (159)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/f8b908f8-26f7-4682-8d38-04fc99d41754)
@@ -16,16 +25,6 @@ Welcome to Vidumaga, an engaging and interactive application developed using Uni
 
 ![Screenshot (158)](https://github.com/Aksal00/Vidumaga---Interactive-Learning-Application-HCI/assets/110421821/1a8608b1-b79e-4631-9cbe-095308b1eac0)
 
-
-
-**Key Features:**
-- **Interactive Activities:** Engage children with a range of interactive activities aimed at promoting early learning and development.
-- **Hand Recognition System:** Utilize the hand recognition system to enhance user interaction, providing a hands-on experience for a dynamic and immersive learning environment.
-- **Letter Writing Activity:** Enhance literacy skills with a dedicated letter writing activity, making the learning process fun and engaging.
-- **Line Matching Activities:** Develop cognitive abilities through entertaining line matching activities.
-- **Interactive Game - Hat Seller:** Enjoy an additional interactive game where a hat seller catches hats from mischievous monkeys, adding a delightful and engaging element to the learning experience.
-- **Virtual Assistant for Instructions:** Benefit from a built-in virtual assistant providing clear instructions, guiding children through various activities for a seamless learning experience.
-- **Interactive Audio:** Immerse children in an interactive audio experience, enhancing engagement and making the learning process more enjoyable.
 
 **How to Use:**
 1. Clone the repository to your local machine.
